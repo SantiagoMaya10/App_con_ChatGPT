@@ -15,5 +15,21 @@ def temperatura():
         resultado = conversiones[conversion](valor)
         st.write(f"{valor} {conversion.split(' a ')[0]} son {resultado:.2f} {conversion.split(' a ')[1]}.")
 
+def longitud():
+    conversiones = {
+        "Pies a metros": lambda p: p * 0.3048,
+        "Metros a pies": lambda m: m / 0.3048,
+        "Pulgadas a centímetros": lambda p: p * 2.54,
+        "Centímetros a pulgadas": lambda c: c / 2.54
+    }
+
+    conversion = st.selectbox("Seleccione el tipo de conversión de longitud:", list(conversiones.keys()))
+    valor = st.number_input("Ingrese el valor a convertir:")
+    
+    if st.button("Convertir"):
+        resultado = conversiones[conversion](valor)
+        st.write(f"{valor} {conversion.split(' a ')[0]} son {resultado:.2f} {conversion.split(' a ')[1]}.")
+
 if __name__ == "__main__":
     temperatura()
+    longitud()

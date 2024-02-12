@@ -113,4 +113,16 @@ def area():
     conversion = st.selectbox("Seleccione el tipo de conversión de área:", opciones)
     valor = st.number_input("Ingrese el valor a convertir:")
     
-    if conversion == "Metros cuadrados a pies cuadrados
+    if conversion == "Metros cuadrados a pies cuadrados":
+        resultado = valor * 10.764
+        st.write(f"{valor} metros cuadrados son {resultado} pies cuadrados.")
+    elif conversion == "Pies cuadrados a metros cuadrados":
+        resultado = valor / 10.764
+        st.write(f"{valor} pies cuadrados son {resultado} metros cuadrados.")
+    elif conversion == "Kilómetros cuadrados a millas cuadradas":
+        resultado = valor * 0.386102
+        st.write(f"{valor} kilómetros cuadrados son {resultado} millas cuadradas.")
+    elif conversion == "Millas cuadradas a kilómetros cuadrados":
+        resultado = valor / 0.386102
+        st.write(f"{valor} millas cuadradas son {resultado} kilómetros cuadrados.")
+

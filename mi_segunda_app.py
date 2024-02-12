@@ -24,7 +24,7 @@ def longitud():
     }
 
     conversion = st.selectbox("Seleccione el tipo de conversión de longitud:", list(conversiones.keys()))
-    valor = st.number_input("Ingrese el valor a convertir:")
+    valor = st.number_input("Ingrese el valor a :")
     
     if st.button("Convertir"):
         resultado = conversiones[conversion](valor)
